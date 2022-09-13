@@ -22,3 +22,8 @@
 - name: Configuration SSL/TLS hardening
   include_tasks: hardening.yml
 
+############ Test java version via command ##################
+
+- name: Test java version via command
+  include_tasks: java_version.yml
+
