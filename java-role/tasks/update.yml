@@ -1,0 +1,4 @@
+  - name: update system wide certificate
+    shell:
+     cmd: update-ca-trust
+

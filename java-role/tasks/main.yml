@@ -1,0 +1,24 @@
+########### check java installed or not ######################
+- name: check java installed or not 
+  include_tasks: verify_java.yml
+
+############ install java packages ###########################
+
+- name: install java packages
+  include_tasks: install_java.yml
+
+############ certificates related tasks ######################
+
+- name: certificates related tasks
+  include_tasks: Configuration.yml
+
+############ update the system wide certificate ##############
+
+- name: update the system wide certificate
+  include_tasks: update.yml
+
+############ Configuration SSL/TLS hardening #################
+
+- name: Configuration SSL/TLS hardening
+  include_tasks: hardening.yml
+

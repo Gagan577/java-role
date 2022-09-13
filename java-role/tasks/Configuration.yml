@@ -1,0 +1,14 @@
+- name: Create directory if doesn't exists
+  file:
+       path: /etc/pki/ca-trust/source/anchors
+       state: directory
+       owner: root
+       group: root
+       mode: '0755'
+- name: copy certificates
+  copy:
+      src: "{{item}}"
+      dest: /etc/pki/ca-trust/source/anchors
+  with_items:
+      - "ca-trust"
+      - "totes"

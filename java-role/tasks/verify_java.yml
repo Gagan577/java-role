@@ -1,0 +1,9 @@
+- name: Status of Open JRE/jdk for java 8
+  stat:
+    path: /etc/alternatives/jre_1.8.0_openjdk
+  register: stat_jre_8_result
+
+- name: Status of Open JRE/jdk for java 11
+  stat:
+    path: /etc/alternatives/jre_11_openjdk
+  register: stat_jre_11_result

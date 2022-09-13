@@ -1,0 +1,14 @@
+- name: Configuration SSL/TLS hardening
+  file:
+       path: /etc/java/security/security.d/custom.security
+       state: touch
+       owner: root
+       group: root
+       mode: '0755'
+- name: line insert
+  ansible.builtin.lineinfile:
+        path: /etc/java/security/security.d/custom.security
+        line: "{{ item }}"
+  with_items:
+         - 'securerandom.source=file:/dev/urandom'
+         - 'jdk.tls.disabledAlgorithms=SSLv3,TLSv1,TLSv1.1,SHA1,DHE,CBC,RC4'
