@@ -1,0 +1,10 @@
+---
+- hosts: web
+  tasks:
+    - name: Check if java is installed
+      command: java -version
+      register: java_result
+      ignore_errors: True
+
+    - debug: msg={{java_result.stderr_lines}}
+     
