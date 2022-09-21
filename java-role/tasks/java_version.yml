@@ -3,11 +3,4 @@
   register: java_result
   ignore_errors: True
 
-- debug:
-    msg: "Failed - Java is not installed"
-  when: java_result is failed
-
-- debug:
-    msg: "Success - Java is installed"
-  when:  java_result is success
-
+- debug: msg={{java_result.stderr_lines}}
