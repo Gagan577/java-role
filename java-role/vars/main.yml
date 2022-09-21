@@ -1,3 +1,14 @@
 ---
-redhat_package:
-  - java-1.8.0-openjdk
+java_redhat_openjdk_packages:
+  6:
+    - java-1.6.0-openjdk
+    - ca-certificates
+  7:
+    - java-1.7.0-openjdk
+    - ca-certificates
+  8:
+    - java-1.8.0-openjdk
+    - ca-certificates
+  9:
+    - java-1.9.0-openjdk
+    - ca-certificates
