@@ -9,3 +9,12 @@ java_version: 8
 # By default we don't accept the licence. Set to yes in your group_vars or
 # host_vars files to install (if "oracle" is set for java_type)
 java_debain_oracle_accept_licence: no
+java_redhat_openjdk_packages:
+  8:
+    - java-1.8.0-openjdk-1.8.0.342.b01
+    
+  11:
+    - java-11-openjdk-11.0.16.0.8
+
+  17:
+    - java-17-openjdk
