@@ -3,6 +3,7 @@
   remote_user: root
   roles:
     - {
+      role: java-role,
       java_type: openjdk,
       java_version: "{{java_version}}",
       pacakage_version: "{{pacakage_version}}"
